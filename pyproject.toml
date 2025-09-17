@@ -1,5 +1,5 @@
 [project]
-name = "xhec-mlops-crashcourse-2024"
+name = "xhec-mlops-crashcourse-2025"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -15,35 +15,33 @@ dependencies = [
   "uvicorn==0.23.2",
   "fastapi==0.103.2",
   "prefect==2.13.7",
-  "griffe<1.0.0"
+  "griffe<1.0.0",
 ]
 
 [tool.uv]
 default-groups = ["dev"]
 
-
 [dependency-groups]
 dev = [
-  "black[jupyter]==22.12.0",
-  "flake8==6.0.0",
-  "isort==5.12.0",
-  "pre-commit==4.2.0"
+  "nbstripout>=0.8.1",
+  "pip-tools>=7.5.0",
+  "pre-commit==4.2.0",
+  "ruff>=0.12.11",
 ]
 
+[tool.ruff]
+line-length = 130
+exclude = ["lessons/best-practices"]
 
-[tool.black]
-line-length = 120
-target-version = ['py311']
-include = '\.pyi?$'
-extend-exclude = '''
-/(
-  | lib/detection
-  | lib/trackers
-  | .ipynb_checkpoints
-  | __pycache__
-)/
-'''
+[tool.ruff.format]
+docstring-code-format = true
 
-[tool.isort]
-profile = "black"
-known_first_party = ["lib"]
+[tool.ruff.lint]
+select = ["D", "ANN","E","W","F","N","Q","ARG","PTH",]
+ignore = ["D417", "D100", "PD901", "N806", "N815", "N803", "ANN401"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.isort]
+order-by-type = true

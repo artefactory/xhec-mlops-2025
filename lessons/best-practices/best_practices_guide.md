@@ -137,35 +137,41 @@ _Linters_ perform a _static_ evaluation of the code to look for bugs and errors.
 - [Flake8](https://flake8.pycqa.org/en/latest/)
 - [Ruff](https://github.com/astral-sh/ruff)
 
-Each linter has its own way of functioning and caveats, so choosing which one might be a matter of just sticking to what your pairs already use or looking for a specific feature. In this repo, we use `flake8` whose configuration can be found in `./.flake8`
+Each linter has its own way of functioning and caveats, so choosing which one might be a matter of just sticking to what your pairs already use or looking for a specific feature. In this repo, we use [Ruff](https://docs.astral.sh/ruff/linter/) whose configuration can be found in `pyproject.toml` in the `[tool.ruff.lint]` section.
 
 ### Demo
 
-- Go to `best-practices` folder and lint the `best-practices` folder using flake8
+- Go to `best-practices` folder and lint the `best-practices` folder using ruff
 
 ```bash
-flake8 .
+uv run ruff check
 ```
 
 ### Automatic Formatting
 
-Good formatting is essential to ensure that your code is readable and comprehensible. However, it is probably the area of coding in which it is the easiest to make a mistake. That is why we generally use tools that format the code automatically, ensuring that we are always PEP compliant. The most used tool for this end is [Black](https://github.com/psf/black). We also often use a tool to organize imports in a logical manner called [isort](https://pycqa.github.io/isort/). The configuration for both tools can be found in the `./pyproject.toml` file.
+Good formatting is essential to ensure that your code is readable and comprehensible. However, it is probably the area of coding in which it is the easiest to make a mistake. That is why we generally use tools that format the code automatically, ensuring that we are always PEP compliant. [Ruff](https://docs.astral.sh/ruff/formatter/) also has an implemented formatter. We also often use this tool to organize imports in a logical manner. The configuration for both tools can be found in the `./pyproject.toml` file in the `[tool.ruff.format]` section.
 
 There are other commonly used tools like [nbstripout](https://github.com/kynan/nbstripout) and [bandit](https://bandit.readthedocs.io/en/latest/) that provide different functionalities, but that have not been used in this project.
 
 ### Demo
 
-- Run `isort` to format the imports
+- Run `ruff` to format the imports
 
 ```bash
-isort .
+uv run ruff check --select I
 ```
+You can add the argument `--fix` to resolve the issue
 
-- Run `black` to format the code
+- Run `ruff` to format the code
 
 ```bash
-black .
+uv run ruff format
 ```
+
+### Additional Notes
+
+You can add or remove some rules in each of the tool to adjust your coding style to the use-case. Finding the right balance between code quality and the delivery of your project is a difficult task that requires good communications between team members. In addition to automatic checks, each team might decide some conventions to ease maintaining a repo (Functions must start with a verb, Use Meaningful variable Names...)
+
 
 ### Pre-commit Hooks
 
@@ -174,7 +180,7 @@ Git provides a useful tool to help putting these technique into practice. Pre-co
 Before using the pre-commits, you must install them, by running in your terminal:
 
 ```bash
-pre-commit install -t pre-commit
+uv run pre-commit install -t pre-commit
 ```
 
 ### Demo
