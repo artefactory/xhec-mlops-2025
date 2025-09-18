@@ -1,5 +1,19 @@
 # Prerequisites and Setup
 
+## Table of Contents
+
+- [How to debug](#how-to-debug)
+- [Docker Desktop](#docker-desktop)
+  - [Download and Install Docker Desktop](#download-and-install-docker-desktop)
+    - [✅ Check your Installation - Docker Desktop](#✅-check-your-installation---docker-desktop)
+    - [Pull a Docker Image](#pull-a-docker-image)
+    - [✅ Check your Installation - Docker Pull](#✅-check-your-installation---docker-pull)
+  - [Git](#git)
+    - [Download & Install](#download--install)
+    - [Configure Git](#configure-git)
+    - [✅ Check your Installation - Git](#✅-check-your-installation---git)
+- [Install requirements](#install-requirements)
+
 > [!Important]
 > The course is dense.
 >
@@ -112,12 +126,11 @@ nyc-taxi     prerun     1878dadc8ab5   6 minutes ago   118MB
 
 ## Git
 
-### Install Git
 
 Git is a distributed version control system that allows multiple people to work on a project at the same time without overwriting each other's changes.
 It's essential for any collaborative coding project.
 
-#### Download & Install
+### Download & Install
 
 To install Git, follow the instructions on the [official Git website](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 Choose the instructions that match your operating system.
@@ -130,7 +143,7 @@ $ git --version
 
 This should return the version of Git that you installed.
 
-#### Configure Git
+### Configure Git
 
 After installing Git, you need to configure it with your name and email address.
 This is important because every Git commit uses this information, and it's immutably baked into the commits you start creating:
@@ -180,14 +193,21 @@ $ git ls-remote --get-url https://github.com/pandas-dev/pandas.git
 https://github.com/pandas-dev/pandas.git
 ```
 
+<<<<<<< HEAD
 ## Package management
 
 #### Create and install requirements
+=======
+
+
+## Install requirements
+>>>>>>> 622a97e (fix: update prerequisites and course timeline in README and PREREQUISITES)
 
 > [!Warning]
 > You will not have access to the course content before the course starts.
-> So here is a requirements sample you should try to install before the course starts.
+> So here is a sample requirements setup you should try before the course begins.
 
+<<<<<<< HEAD
 Be sure to have Python already installed.
 
 1. Install pip
@@ -199,36 +219,75 @@ python -m ensurepip --upgrade
 
 2. Install uv
 Check the [official documentation](https://docs.astral.sh/uv/pip/environments/).
+=======
+Follow these steps to set up your Python environment and install the required packages:
+>>>>>>> 622a97e (fix: update prerequisites and course timeline in README and PREREQUISITES)
 
-```bash
-pip install uv
-```
+1. **Install `uv`** (a fast Python package manager):
 
+<<<<<<< HEAD
 3. Sync a virtual environment with the defined requirements in `pyproject.toml` file, and activate the environment.
 
 ```bash
 uv sync
 source .venv/bin/activate
 ```
+=======
+  ```bash
+  pip install uv
+  ```
+2. **Create a sample `pyproject.toml` file** in your working directory with the following content:
 
-#### ✅ Check your Installation - Requirements
+  ```toml
+  [project]
+  name = "xhec-mlops-2025-sample"
+  version = "0.1.0"
+  description = "Sample project for MLOps course prerequisites."
+  authors = [
+      { name = "Your Name", email = "your.email@example.com" }
+  ]
+  requires-python = ">=3.11"
+  dependencies = [
+      "fastapi==0.88.0"
+  ]
+  ```
+>>>>>>> 622a97e (fix: update prerequisites and course timeline in README and PREREQUISITES)
 
+3. **Install all dependencies** listed in the `pyproject.toml` file. This will create a virtual environment (if needed) and install everything:
+
+<<<<<<< HEAD
 4. Check your requirements can be found in your virtual env by running:
+=======
+  ```bash
+  uv sync
+  ```
+>>>>>>> 622a97e (fix: update prerequisites and course timeline in README and PREREQUISITES)
 
-```bash
-$ uv pip list
-fastapi==0.88.0
-...
-```
+4. **Verify your installation:**
+  - List installed packages to check that everything is present (for example, `fastapi`):
 
+<<<<<<< HEAD
 5. Check you can access them from python
+=======
+    ```bash
+    uv pip list
+    ```
+    You should see something like:
+    ```
+    fastapi==0.88.0
+    ...
+    ```
+>>>>>>> 622a97e (fix: update prerequisites and course timeline in README and PREREQUISITES)
 
-```bash
-$ python
-Type "help", "copyright", "credits" or "license" for more information.
->>> import fastapi
->>> fastapi.__version__
-'0.88.0'
-```
+  - Open a Python shell and check you can import the packages:
+
+    ```bash
+    uv run python
+    >>> import fastapi
+    >>> fastapi.__version__
+    '0.88.0'
+    ```
+
+If you see the correct version and no errors, your environment is ready!
 
 Thank you ✨ !
