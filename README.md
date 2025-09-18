@@ -19,8 +19,8 @@ You can find all pre-requisites and setup instructions [here](PREREQUISITES.md).
 
 ## Timeline
 
-Course start: October 19th
-Course end: October 23th
+Course start: October 21st
+Course end: October 24th
 
 ## Syllabus
 
@@ -54,20 +54,12 @@ Course end: October 23th
 - Workflows orchestration with prefect
 - Practice
 
-## [Module 5: Life Cycle Management]
-
-- Model monitoring
-- Model retraining
-- Concept drift
-- Data drift & data management
-
-## [Module 6: Project]
+## Project
 
 - End-to-end project with all the things above
 
 ## Instructors
 
-- DELATTRE Bruce
-- BRITO Henrique
-- BERTRAND Jules
-- SERRA Luca
+- Debes Hugo
+- Jouini Youssef
+- Rohart Capucine
