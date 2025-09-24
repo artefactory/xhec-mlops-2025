@@ -22,7 +22,7 @@
 ## How to debug
 
 1. Check and try to understand your error message
-2. Google it / StackOverflow it
+2. ChatGPT it / Google it / StackOverflow it
 3. If you can't find a solution, ask your friends
 4. If your friends can't help you, ask us on Slack
 
@@ -74,7 +74,7 @@ Once docker is installed, make sure that it is running correctly by running:
 $ docker run -p 80:80 docker/getting-started
 ```
 
-If you check the Docker App, you should see a getting started container running. Once you've checked that this works correctly, remove the container via the UI.
+If you check the Docker App, you should see a 'getting started' container running. Once you've checked that this works correctly, remove the container via the UI.
 
 <details>
     <summary><b>Optional</b></summary>
@@ -104,6 +104,10 @@ $ docker images
 REPOSITORY   TAG        IMAGE ID       CREATED         SIZE
 nyc-taxi     prerun     1878dadc8ab5   6 minutes ago   118MB
 ```
+<details>
+    <summary><b>Optional</b></summary>
+    Once you've checked that this works correctly, remove the image by running in your terminal: <code>docker rmi [IMAGE ID]<code>
+</details>
 
 ## Git
 
