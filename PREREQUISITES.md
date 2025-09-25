@@ -107,7 +107,7 @@ nyc-taxi     prerun     1878dadc8ab5   6 minutes ago   118MB
 
 <details>
     <summary><b>Optional</b></summary>
-    Once you've checked that this works correctly, remove the image by running in your terminal: <code>docker rmi [IMAGE ID]<code>
+    Once you've checked that this works correctly, remove the image by running in your terminal: <code>docker rmi [IMAGE ID]</code>
 </details>
 
 ## Git
