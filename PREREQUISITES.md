@@ -5,13 +5,13 @@
 - [How to debug](#how-to-debug)
 - [Docker Desktop](#docker-desktop)
   - [Download and Install Docker Desktop](#download-and-install-docker-desktop)
-    - [✅ Check your Installation - Docker Desktop](#-check-your-installation---docker-desktop)
-    - [Pull a Docker Image](#pull-a-docker-image)
-    - [✅ Check your Installation - Docker Pull](#-check-your-installation---docker-pull)
-  - [Git](#git)
-    - [Download & Install](#download--install)
-    - [Configure Git](#configure-git)
-    - [✅ Check your Installation - Git](#-check-your-installation---git)
+  - [✅ Check your Installation - Docker Desktop](#✅-check-your-installation---docker-desktop)
+  - [Pull a Docker Image](#pull-a-docker-image)
+  - [✅ Check your Installation - Docker Pull](#✅-check-your-installation---docker-pull)
+- [Git](#git)
+  - [Download & Install](#download--install)
+  - [Configure Git](#configure-git)
+  - [✅ Check your Installation - Git](#✅-check-your-installation---git)
 - [Install requirements](#install-requirements)
 
 > [!Important]
@@ -39,25 +39,6 @@
 2. ChatGPT it / Google it / StackOverflow it
 3. If you can't find a solution, ask your friends
 4. If your friends can't help you, ask us on Slack
-
-<details>
-  <summary>📚 Table of Contents</summary>
-
-- [Docker Desktop](#docker-desktop)
-  - [Download and Install Docker Desktop](#download-and-install-docker-desktop)
-  - [✅ Check your Installation](#✅-check-your-installation---docker-desktop)
-  - [Pull a Docker Image](#pull-a-docker-image)
-  - [✅ Check your Installation](#✅-check-your-installation---docker-pull)
-- [Git](#git)
-  - [Install Git](#install-git)
-    - [Download & Install](#download-&-install)
-    - [Configure Git](#configure-git)
-  - [✅ Check your Installation](#✅-check-your-installation---git)
-- [Install requirements](#install-requirements)
-  - [Create and install requirements](#create-and-install-requirements)
-  - [✅ Check your Installation](#✅-check-your-installation---requirements)
-
-</details>
 
 ## Docker Desktop
 
