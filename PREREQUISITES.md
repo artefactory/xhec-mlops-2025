@@ -22,7 +22,7 @@
 ## How to debug
 
 1. Check and try to understand your error message
-2. Google it / StackOverflow it
+2. ChatGPT it / Google it / StackOverflow it
 3. If you can't find a solution, ask your friends
 4. If your friends can't help you, ask us on Slack
 
@@ -74,11 +74,11 @@ Once docker is installed, make sure that it is running correctly by running:
 $ docker run -p 80:80 docker/getting-started
 ```
 
-If you check the Docker App, you should see a getting started container running. Once you've checked that this works correctly, remove the container via the UI.
+If you check the Docker App, you should see a 'getting started' container running. Once you've checked that this works correctly, remove the container via the UI.
 
 <details>
     <summary><b>Optional</b></summary>
-    You can also perform these operations directly from the command line, by running <code>docker ps</code> to check the running containers and <code>docker rm -f [CONTAINER-ID]</code> to remove it.
+    You can also perform these operations directly from the command line, by running <code>docker ps</code> to check the running containers, <code>docker stop [CONTAINER-ID]</code> to stop it and <code>docker rm -f [CONTAINER-ID]</code> to remove it.
 </details>
 
 ### Pull a Docker Image
@@ -104,6 +104,11 @@ $ docker images
 REPOSITORY   TAG        IMAGE ID       CREATED         SIZE
 nyc-taxi     prerun     1878dadc8ab5   6 minutes ago   118MB
 ```
+
+<details>
+    <summary><b>Optional</b></summary>
+    Once you've checked that this works correctly, remove the image by running in your terminal: <code>docker rmi [IMAGE ID]</code>
+</details>
 
 ## Git
 
@@ -160,6 +165,8 @@ $ git --version
 
 ```
 
+Complete/check your setup with the following command (Type `:q` to exit):
+
 ```bash
 $ git config --global --list
 user.name=johndoe
@@ -173,31 +180,7 @@ $ git ls-remote --get-url https://github.com/pandas-dev/pandas.git
 https://github.com/pandas-dev/pandas.git
 ```
 
-## Conda + Python
-
-### Conda or MiniConda
-
-[Conda](https://docs.conda.io/en/latest/) is a package manager that allows you to install and manage packages on your computer.
-[Miniconda](https://docs.conda.io/en/latest/miniconda.html) is a minimal installer for conda.
-It includes only conda, Python, the packages they depend on, and a small number of other useful packages, including pip, zlib and a few others.
-
-#### Install Miniconda
-
-To install Miniconda, follow the instructions on the [official Miniconda website](https://docs.conda.io/en/latest/miniconda.html).
-
-#### ✅ Check your Installation - Conda
-
-Open a terminal, you should be able to run the following commands:
-
-```bash
-$ conda --version
-conda 22.9.0
-```
-
-```bash
-$ conda env list
-base                     /path/to/miniconda3
-```
+## Package management + Python
 
 #### Create and install requirements
 
@@ -206,15 +189,17 @@ base                     /path/to/miniconda3
 > So here is a requirements sample you should try to install before the course starts.
 
 1. Install uv
+Check the [official documentation](https://docs.astral.sh/uv/pip/environments/).
 
 ```bash
 pip install uv
 ```
 
-2. Sync a virtual environment with the defined requirements in `pyproject.toml` file.
+2. Sync a virtual environment with the defined requirements in `pyproject.toml` file, and activate the environment.
 
 ```bash
 uv sync
+source .venv/bin/activate
 ```
 
 #### ✅ Check your Installation - Requirements

@@ -19,8 +19,8 @@ You can find all pre-requisites and setup instructions [here](PREREQUISITES.md).
 
 ## Timeline
 
-Course start: October 19th
-Course end: October 23th
+Course start: October 21st
+Course end: October 24th
 
 ## Syllabus
 
@@ -67,7 +67,7 @@ Course end: October 23th
 
 ## Instructors
 
-- DELATTRE Bruce
-- BRITO Henrique
-- BERTRAND Jules
-- SERRA Luca
+- DEBES Hugo
+- JOUINI Youssef
+- ROHART Capucine
+- SION Pierre
