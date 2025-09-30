@@ -5,13 +5,13 @@
 - [How to debug](#how-to-debug)
 - [Docker Desktop](#docker-desktop)
   - [Download and Install Docker Desktop](#download-and-install-docker-desktop)
-    - [✅ Check your Installation - Docker Desktop](#✅-check-your-installation---docker-desktop)
+    - [✅ Check your Installation - Docker Desktop](#-check-your-installation---docker-desktop)
     - [Pull a Docker Image](#pull-a-docker-image)
-    - [✅ Check your Installation - Docker Pull](#✅-check-your-installation---docker-pull)
+    - [✅ Check your Installation - Docker Pull](#-check-your-installation---docker-pull)
   - [Git](#git)
     - [Download & Install](#download--install)
     - [Configure Git](#configure-git)
-    - [✅ Check your Installation - Git](#✅-check-your-installation---git)
+    - [✅ Check your Installation - Git](#-check-your-installation---git)
 - [Install requirements](#install-requirements)
 
 > [!Important]
