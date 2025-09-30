@@ -5,13 +5,13 @@
 - [How to debug](#how-to-debug)
 - [Docker Desktop](#docker-desktop)
   - [Download and Install Docker Desktop](#download-and-install-docker-desktop)
-  - [✅ Check your Installation - Docker Desktop](#✅-check-your-installation---docker-desktop)
+  - [Check your Installation - Docker Desktop](#check-your-installation---docker-desktop)
   - [Pull a Docker Image](#pull-a-docker-image)
-  - [✅ Check your Installation - Docker Pull](#✅-check-your-installation---docker-pull)
+  - [Check your Installation - Docker Pull](#check-your-installation---docker-pull)
 - [Git](#git)
   - [Download & Install](#download--install)
   - [Configure Git](#configure-git)
-  - [✅ Check your Installation - Git](#✅-check-your-installation---git)
+  - [Check your Installation - Git](#check-your-installation---git)
 - [Install requirements](#install-requirements)
 
 > [!Important]
@@ -61,7 +61,7 @@ For those of you working on Windows, you might need to update Windows Subsystem 
 wsl --update
 ```
 
-### ✅ Check your Installation - Docker Desktop
+### Check your Installation - Docker Desktop
 
 Once docker is installed, make sure that it is running correctly by running:
 
@@ -86,7 +86,7 @@ Place your terminal at the root of the project and run:
 $ docker build -t "nyc-taxi:prerun" -f "lessons/02-model-deployment/Dockerfile.app" ./lessons/02-model-deployment
 ```
 
-### ✅ Check your Installation - Docker Pull
+### Check your Installation - Docker Pull
 
 You should be able to see your image in the Docker Desktop UI:
 
@@ -150,7 +150,7 @@ Please carefully follow [instructions here](https://github.com/git-for-windows/g
 
 </details>
 
-### ✅ Check your Installation - Git
+### Check your Installation - Git
 
 Open a terminal, you should be able to run the following commands:
 
