@@ -61,7 +61,7 @@ In this first part, you will create a simple application that runs locally on yo
 
 Starting by defining your inputs and outputs is often a good idea in app development because it will guide the decisions you make in designing your software.
 
-Create a `pydantic` model that specifies the input the user should provide. *See an example [here](https://github.com/artefactory/xhec-mlops-crashcourse-2023/blob/feature-deployment/lessons/02-model-deployment/fast_api_tutorial/fast_api_tutorial.md#create-a-post-operation)*
+Create a `pydantic` model that specifies the input the user should provide. *See an example [here](https://fastapi.tiangolo.com/tutorial/body/#import-pydantics-basemodel)*
 
 > *Do you expect a single value or a list of values?*
 

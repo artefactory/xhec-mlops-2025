@@ -60,6 +60,7 @@ Course end: October 24th
 
 ## Instructors
 
-- Debes Hugo
-- Jouini Youssef
-- Rohart Capucine
+- DEBES Hugo
+- JOUINI Youssef
+- ROHART Capucine
+- SION Pierre
