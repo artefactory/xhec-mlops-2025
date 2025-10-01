@@ -174,7 +174,6 @@ $ git ls-remote --get-url https://github.com/pandas-dev/pandas.git
 https://github.com/pandas-dev/pandas.git
 ```
 
-
 ## Install requirements
 
 > [!Warning]
@@ -187,19 +186,16 @@ Be sure to have Python already installed.
 1. **Install `pip`**
 Check the [documentation](https://pip.pypa.io/en/stable/installation/) and run the following command to install.
 
-```bash
-python -m ensurepip --upgrade
-```
+Follow these steps to set up your Python environment and install the required packages:
 
 2. **Install `uv`** (a fast Python package manager):
 Check the [official documentation](https://docs.astral.sh/uv/pip/environments/).
 
-```bash
+  ```bash
   uv sync
   source .venv/bin/activate
   pip install uv
-```
-
+  ```
 3. **Create a sample `pyproject.toml` file** in your working directory with the following content:
 
   ```toml
@@ -218,9 +214,9 @@ Check the [official documentation](https://docs.astral.sh/uv/pip/environments/).
 
 4. **Install all dependencies** listed in the `pyproject.toml` file. This will create a virtual environment (if needed) and install everything:
 
-  ```bash
-  uv sync
-  ```
+```bash
+python -m ensurepip --upgrade
+```
 
 5. **Verify your installation:**
   - List installed packages to check that everything is present (for example, `fastapi`):
