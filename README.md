@@ -54,14 +54,7 @@ Course end: October 24th
 - Workflows orchestration with prefect
 - Practice
 
-## [Module 5: Life Cycle Management]
-
-- Model monitoring
-- Model retraining
-- Concept drift
-- Data drift & data management
-
-## [Module 6: Project]
+## Project
 
 - End-to-end project with all the things above
 
