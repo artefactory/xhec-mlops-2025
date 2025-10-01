@@ -22,7 +22,7 @@
 ## How to debug
 
 1. Check and try to understand your error message
-2. Google it / StackOverflow it
+2. ChatGPT it / Google it / StackOverflow it
 3. If you can't find a solution, ask your friends
 4. If your friends can't help you, ask us on Slack
 
@@ -74,11 +74,11 @@ Once docker is installed, make sure that it is running correctly by running:
 $ docker run -p 80:80 docker/getting-started
 ```
 
-If you check the Docker App, you should see a getting started container running. Once you've checked that this works correctly, remove the container via the UI.
+If you check the Docker App, you should see a 'getting started' container running. Once you've checked that this works correctly, remove the container via the UI.
 
 <details>
     <summary><b>Optional</b></summary>
-    You can also perform these operations directly from the command line, by running <code>docker ps</code> to check the running containers and <code>docker rm -f [CONTAINER-ID]</code> to remove it.
+    You can also perform these operations directly from the command line, by running <code>docker ps</code> to check the running containers, <code>docker stop [CONTAINER-ID]</code> to stop it and <code>docker rm -f [CONTAINER-ID]</code> to remove it.
 </details>
 
 ### Pull a Docker Image
@@ -165,6 +165,8 @@ $ git --version
 
 ```
 
+Complete/check your setup with the following command (Type `:q` to exit):
+
 ```bash
 $ git config --global --list
 user.name=johndoe
@@ -195,22 +197,23 @@ Check the [documentation](https://pip.pypa.io/en/stable/installation/) and run t
 python -m ensurepip --upgrade
 ```
 
-
-1. Install uv
+2. Install uv
+Check the [official documentation](https://docs.astral.sh/uv/pip/environments/).
 
 ```bash
 pip install uv
 ```
 
-2. Sync a virtual environment with the defined requirements in `pyproject.toml` file.
+3. Sync a virtual environment with the defined requirements in `pyproject.toml` file, and activate the environment.
 
 ```bash
 uv sync
+source .venv/bin/activate
 ```
 
 #### ✅ Check your Installation - Requirements
 
-3. Check your requirements can be found in your virtual env by running:
+4. Check your requirements can be found in your virtual env by running:
 
 ```bash
 $ uv pip list
@@ -218,7 +221,7 @@ fastapi==0.88.0
 ...
 ```
 
-4. Check you can access them from python
+5. Check you can access them from python
 
 ```bash
 $ python
