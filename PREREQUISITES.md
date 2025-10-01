@@ -105,6 +105,11 @@ REPOSITORY   TAG        IMAGE ID       CREATED         SIZE
 nyc-taxi     prerun     1878dadc8ab5   6 minutes ago   118MB
 ```
 
+<details>
+    <summary><b>Optional</b></summary>
+    Once you've checked that this works correctly, remove the image by running in your terminal: <code>docker rmi [IMAGE ID]</code>
+</details>
+
 ## Git
 
 ### Install Git
@@ -173,37 +178,23 @@ $ git ls-remote --get-url https://github.com/pandas-dev/pandas.git
 https://github.com/pandas-dev/pandas.git
 ```
 
-## Conda + Python
-
-### Conda or MiniConda
-
-[Conda](https://docs.conda.io/en/latest/) is a package manager that allows you to install and manage packages on your computer.
-[Miniconda](https://docs.conda.io/en/latest/miniconda.html) is a minimal installer for conda.
-It includes only conda, Python, the packages they depend on, and a small number of other useful packages, including pip, zlib and a few others.
-
-#### Install Miniconda
-
-To install Miniconda, follow the instructions on the [official Miniconda website](https://docs.conda.io/en/latest/miniconda.html).
-
-#### ✅ Check your Installation - Conda
-
-Open a terminal, you should be able to run the following commands:
-
-```bash
-$ conda --version
-conda 22.9.0
-```
-
-```bash
-$ conda env list
-base                     /path/to/miniconda3
-```
+## Package management
 
 #### Create and install requirements
 
 > [!Warning]
 > You will not have access to the course content before the course starts.
 > So here is a requirements sample you should try to install before the course starts.
+
+Be sure to have Python already installed.
+
+1. Install pip
+Check the [documentation](https://pip.pypa.io/en/stable/installation/) and run the following command to install.
+
+```bash
+python -m ensurepip --upgrade
+```
+
 
 1. Install uv
 
