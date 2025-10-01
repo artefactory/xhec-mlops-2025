@@ -174,15 +174,8 @@ $ git ls-remote --get-url https://github.com/pandas-dev/pandas.git
 https://github.com/pandas-dev/pandas.git
 ```
 
-<<<<<<< HEAD
-## Package management
-
-#### Create and install requirements
-=======
-
 
 ## Install requirements
->>>>>>> 622a97e (fix: update prerequisites and course timeline in README and PREREQUISITES)
 
 > [!Warning]
 > You will not have access to the course content before the course starts.
