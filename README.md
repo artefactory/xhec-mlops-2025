@@ -60,13 +60,7 @@ Course end: October 24th
 
 ## Instructors
 
-<<<<<<< HEAD
 - DEBES Hugo
 - JOUINI Youssef
 - ROHART Capucine
 - SION Pierre
-=======
-- Debes Hugo
-- Jouini Youssef
-- Rohart Capucine
->>>>>>> 622a97e (fix: update prerequisites and course timeline in README and PREREQUISITES)

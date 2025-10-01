@@ -188,36 +188,26 @@ https://github.com/pandas-dev/pandas.git
 > You will not have access to the course content before the course starts.
 > So here is a sample requirements setup you should try before the course begins.
 
-<<<<<<< HEAD
+Follow these steps to set up your Python environment and install the required packages:
 Be sure to have Python already installed.
 
-1. Install pip
+1. **Install `pip`**
 Check the [documentation](https://pip.pypa.io/en/stable/installation/) and run the following command to install.
 
 ```bash
 python -m ensurepip --upgrade
 ```
 
-2. Install uv
+2. **Install `uv`** (a fast Python package manager):
 Check the [official documentation](https://docs.astral.sh/uv/pip/environments/).
-=======
-Follow these steps to set up your Python environment and install the required packages:
->>>>>>> 622a97e (fix: update prerequisites and course timeline in README and PREREQUISITES)
-
-1. **Install `uv`** (a fast Python package manager):
-
-<<<<<<< HEAD
-3. Sync a virtual environment with the defined requirements in `pyproject.toml` file, and activate the environment.
 
 ```bash
-uv sync
-source .venv/bin/activate
-```
-=======
-  ```bash
+  uv sync
+  source .venv/bin/activate
   pip install uv
-  ```
-2. **Create a sample `pyproject.toml` file** in your working directory with the following content:
+```
+
+3. **Create a sample `pyproject.toml` file** in your working directory with the following content:
 
   ```toml
   [project]
@@ -232,24 +222,16 @@ source .venv/bin/activate
       "fastapi==0.88.0"
   ]
   ```
->>>>>>> 622a97e (fix: update prerequisites and course timeline in README and PREREQUISITES)
 
-3. **Install all dependencies** listed in the `pyproject.toml` file. This will create a virtual environment (if needed) and install everything:
+4. **Install all dependencies** listed in the `pyproject.toml` file. This will create a virtual environment (if needed) and install everything:
 
-<<<<<<< HEAD
-4. Check your requirements can be found in your virtual env by running:
-=======
   ```bash
   uv sync
   ```
->>>>>>> 622a97e (fix: update prerequisites and course timeline in README and PREREQUISITES)
 
-4. **Verify your installation:**
+5. **Verify your installation:**
   - List installed packages to check that everything is present (for example, `fastapi`):
 
-<<<<<<< HEAD
-5. Check you can access them from python
-=======
     ```bash
     uv pip list
     ```
@@ -258,7 +240,6 @@ source .venv/bin/activate
     fastapi==0.88.0
     ...
     ```
->>>>>>> 622a97e (fix: update prerequisites and course timeline in README and PREREQUISITES)
 
   - Open a Python shell and check you can import the packages:
 
