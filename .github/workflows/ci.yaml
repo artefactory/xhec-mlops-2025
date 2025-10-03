@@ -22,6 +22,6 @@ jobs:
                   python -m pip install --upgrade pip
                   pip install pipx && pipx ensurepath
                   pipx install uv
-                  CI=true make install
+                  uv sync
             - name: Run Pre commit hook (formatting, linting & tests)
               run: source .venv/bin/activate && pre-commit run --all-files --hook-stage pre-push --show-diff-on-failure
