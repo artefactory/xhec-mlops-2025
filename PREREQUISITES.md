@@ -174,8 +174,6 @@ $ git ls-remote --get-url https://github.com/pandas-dev/pandas.git
 https://github.com/pandas-dev/pandas.git
 ```
 
-
-
 ## Install requirements
 
 > [!Warning]
@@ -183,15 +181,22 @@ https://github.com/pandas-dev/pandas.git
 > So here is a sample requirements setup you should try before the course begins.
 
 Follow these steps to set up your Python environment and install the required packages:
+Be sure to have Python already installed.
 
-1. **Install `uv`** (a fast Python package manager):
-1. Install uv
+1. **Install `pip`**
+Check the [documentation](https://pip.pypa.io/en/stable/installation/) and run the following command to install.
+
+Follow these steps to set up your Python environment and install the required packages:
+
+2. **Install `uv`** (a fast Python package manager):
 Check the [official documentation](https://docs.astral.sh/uv/pip/environments/).
 
   ```bash
+  uv sync
+  source .venv/bin/activate
   pip install uv
   ```
-2. **Create a sample `pyproject.toml` file** in your working directory with the following content:
+3. **Create a sample `pyproject.toml` file** in your working directory with the following content:
 
   ```toml
   [project]
@@ -207,14 +212,13 @@ Check the [official documentation](https://docs.astral.sh/uv/pip/environments/).
   ]
   ```
 
-3. **Install all dependencies** listed in the `pyproject.toml` file. This will create a virtual environment (if needed) and install everything:
+4. **Install all dependencies** listed in the `pyproject.toml` file. This will create a virtual environment (if needed) and install everything:
 
 ```bash
-uv sync
-source .venv/bin/activate
+python -m ensurepip --upgrade
 ```
 
-4. **Verify your installation:**
+5. **Verify your installation:**
   - List installed packages to check that everything is present (for example, `fastapi`):
 
     ```bash
