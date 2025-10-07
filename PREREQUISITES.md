@@ -165,6 +165,7 @@ Follow these steps to set up your Python environment and install the required pa
     Create an empty directory named `prerequisites` and initialize the configuration files using `uv init` inside it. This creates `pyproject.toml` and other necessary files.
     ```bash
     uv init
+    source .venv/bin/activate  # On Windows use `.venv\Scripts\activate`
     ```
 
 3.  **Add FastAPI Dependency:**
