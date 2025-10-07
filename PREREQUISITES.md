@@ -6,8 +6,6 @@
 - [Docker Desktop](#docker-desktop)
   - [Download and Install Docker Desktop](#download-and-install-docker-desktop)
   - [Check your Installation - Docker Desktop](#check-your-installation---docker-desktop)
-  - [Pull a Docker Image](#pull-a-docker-image)
-  - [Check your Installation - Docker Pull](#check-your-installation---docker-pull)
 - [Git](#git)
   - [Download & Install](#download--install)
   - [Configure Git](#configure-git)
@@ -76,34 +74,6 @@ If you check the Docker App, you should see a 'getting started' container runnin
     You can also perform these operations directly from the command line, by running <code>docker ps</code> to check the running containers, <code>docker stop [CONTAINER-ID]</code> to stop it and <code>docker rm -f [CONTAINER-ID]</code> to remove it.
 </details>
 
-### Pull a Docker Image
-
-During session 2 of this course, you will need to build a Docker image yourself. To speed up the building process, you can pre-build your image.
-
-Place your terminal at the root of the project and run:
-
-```bash
-$ docker build -t "nyc-taxi:prerun" -f "lessons/02-model-deployment/Dockerfile.app" ./lessons/02-model-deployment
-```
-
-### Check your Installation - Docker Pull
-
-You should be able to see your image in the Docker Desktop UI:
-
-![Docker Image](./images/example_image.png)
-
-You can also check that it worked that by running:
-
-```bash
-$ docker images
-REPOSITORY   TAG        IMAGE ID       CREATED         SIZE
-nyc-taxi     prerun     1878dadc8ab5   6 minutes ago   118MB
-```
-
-<details>
-    <summary><b>Optional</b></summary>
-    Once you've checked that this works correctly, remove the image by running in your terminal: <code>docker rmi [IMAGE ID]</code>
-</details>
 
 ## Git
 
@@ -180,63 +150,46 @@ https://github.com/pandas-dev/pandas.git
 > You will not have access to the course content before the course starts.
 > So here is a sample requirements setup you should try before the course begins.
 
-Follow these steps to set up your Python environment and install the required packages:
-Be sure to have Python already installed.
+Follow these steps to set up your Python environment and install the required packages using `uv`. Be sure to have Python already installed.
 
-1. **Install `pip`**
-Check the [documentation](https://pip.pypa.io/en/stable/installation/) and run the following command to install.
 
-Follow these steps to set up your Python environment and install the required packages:
+1.  **Install `uv` globally (if not already present):**
+    We recommend installing `uv` using `pipx` for a clean global installation, as done in our CI pipeline.
+    ```bash
+    python -m pip install --upgrade pip
+    python -m pip install pipx && pipx ensurepath
+    pipx install uv
+    ```
 
-2. **Install `uv`** (a fast Python package manager):
-Check the [official documentation](https://docs.astral.sh/uv/pip/environments/).
+2.  **Initialize Project Configuration:**
+    Create an empty directory named `prerequisites` and initialize the configuration files using `uv init` inside it. This creates `pyproject.toml` and other necessary files.
+    ```bash
+    uv init
+    ```
 
-  ```bash
-  uv sync
-  source .venv/bin/activate
-  pip install uv
-  ```
-3. **Create a sample `pyproject.toml` file** in your working directory with the following content:
+3.  **Add FastAPI Dependency:**
+    Add the core web framework dependency using `uv add`. This updates both `pyproject.toml` and `uv.lock`.
+    ```bash
+    uv add fastapi
+    ```
 
-  ```toml
-  [project]
-  name = "xhec-mlops-2025-sample"
-  version = "0.1.0"
-  description = "Sample project for MLOps course prerequisites."
-  authors = [
-      { name = "Your Name", email = "your.email@example.com" }
-  ]
-  requires-python = ">=3.11"
-  dependencies = [
-      "fastapi==0.88.0"
-  ]
-  ```
+4.  **Install Dependencies:**
+    Synchronize the virtual environment to install all dependencies listed in the newly created/updated files.
+    ```bash
+    uv sync
+    ```
 
-4. **Install all dependencies** listed in the `pyproject.toml` file. This will create a virtual environment (if needed) and install everything:
-
-```bash
-python -m ensurepip --upgrade
-```
-
-5. **Verify your installation:**
-  - List installed packages to check that everything is present (for example, `fastapi`):
-
+5.  **Verify your installation:**
+    Check that all packages are installed correctly (you should see `fastapi` in the list):
     ```bash
     uv pip list
     ```
-    You should see something like:
-    ```
-    fastapi==0.88.0
-    ...
-    ```
-
-  - Open a Python shell and check you can import the packages:
-
+    Then, open a Python shell to verify imports:
     ```bash
     uv run python
     >>> import fastapi
-    >>> fastapi.__version__
-    '0.88.0'
+    >>> fastapi.__version__ # Should be something like '0.118.0'
+    >>> exit()
     ```
 
 If you see the correct version and no errors, your environment is ready!
