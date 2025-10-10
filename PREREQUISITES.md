@@ -212,7 +212,6 @@ Try to reach pandas GitHub repo to check your connection to GitHub:
 
 ```bash
 git ls-remote --get-url https://github.com/pandas-dev/pandas.git
-https://github.com/pandas-dev/pandas.git
 ```
 
 ## Install requirements
