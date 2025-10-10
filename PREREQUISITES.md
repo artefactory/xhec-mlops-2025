@@ -187,7 +187,7 @@ This is important because every Git commit uses this information, and it's immut
 
 ```bash
 git config --global user.name "Your Name"
-git config --global user.email "you email@foo.bar"
+git config --global user.email "your.email@foo.bar"
 ```
 
 You can find full configuration instruction on the [official Git website](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup).
