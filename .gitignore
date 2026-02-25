@@ -58,6 +58,7 @@ target/
 
 # Venv
 venv/*
+.venv/
 
 # Database
 *.db
