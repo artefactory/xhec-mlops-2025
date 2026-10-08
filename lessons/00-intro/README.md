@@ -40,6 +40,12 @@ To complete this module, you will need three samples of data:
 > Please place the downloaded files inside the "data" folder in the course root directory. \
 > If the names are different, please rename your files to "yellow_tripdata_2021-01.parquet", "yellow_tripdata_2021-02.parquet", and "yellow_tripdata_2021-03.parquet" respectively.
 
+```shell
+curl -LO https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2021-01.parquet
+curl -LO https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2021-02.parquet
+curl -LO https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2021-03.parquet
+```
+
 ### Introduction Notebook
 
 A notebook implementing the machine learning steps to predict Taxi trip duration can be found [here](./practice-intro-subject.ipynb). Your first task is run this notebook and pay attention to:

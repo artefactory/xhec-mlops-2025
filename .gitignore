@@ -91,3 +91,8 @@ venv/*
 
 #MLFlow
 mlruns/
+
+/lessons/02-model-deployment/fast_api_tutorial/main.py
+
+# Exercise solutions (keep solution.zip archives tracked)
+solution/

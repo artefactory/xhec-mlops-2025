@@ -5,19 +5,22 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-  "seaborn==0.12.2",
+  "seaborn==0.13.2",
   "scikit-learn==1.5.2",
   "ipykernel==6.25.2",
   "pandas==2.1.1",
   "loguru==0.7.2",
-  "mlflow==2.7.1",
-  "pydantic>=1,<2",
+  "mlflow==3.16.1",
+  "pydantic>=2,<3",
   "uvicorn==0.23.2",
   "fastapi==0.103.2",
   "prefect==2.13.7",
   "griffe<1.0.0",
   "setuptools==80.9.0",
-  "gdown==5.2.0"
+  "pandas-stubs~=2.1.1",
+  "scipy-stubs~=1.16.1",
+  "fg-data-profiling[notebook]==4.20.0",
+  "plotly==6.9.0",
 ]
 
 [tool.uv]

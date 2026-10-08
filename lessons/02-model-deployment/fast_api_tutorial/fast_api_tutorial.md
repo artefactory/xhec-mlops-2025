@@ -55,7 +55,7 @@ cd lessons/02-model-deployment/fast_api_tutorial
 ```
 
 ```bash
-uvicorn main:app --reload
+uv run uvicorn main:app --reload
 ```
 
 [`Uvicorn`](https://www.uvicorn.org/) is a tool that helps your Python web applications run quickly and handle many tasks at the same time. We are using it here to run our FastAPI application. The command we used tells it to look for the `app` object inside our `main.py` file. The `--reload` option relaunches the application every time the code changes (it should only be used in development).
@@ -109,10 +109,12 @@ In this example, we define a POST operation at the path "/greet". The `function`
 
 One useful feature of `FastAPI` is that it performs automatic data validation using python's type hints. To do so, it uses the [pydantic](https://docs.pydantic.dev/latest/) package, which allows us to create `models` that enforce data structures in our code. In our example, the operation expects a JSON body with a field "name". The Item class is a `pydantic` model that helps with data validation and serialization. When a POST request is made to "/greet" with a JSON body like {"name": "Alice"}, the server will respond with {"message": "Hello, Alice"}.
 
-To run this application, overwrite the code in `main.py` and use the same command to launch the app:
+Overwrite the code in `main.py` and save the file. Since Uvicorn is already running with the `--reload` option, it will automatically detect the change and reload the application. You do not need to restart the server.
+
+If you previously stopped the server, launch it again with:
 
 ```bash
-uvicorn main:app --reload
+uv run uvicorn main:app --reload
 ```
 
 ### Testing the app
